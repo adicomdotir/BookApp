@@ -11,10 +11,11 @@ public class BookViewerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_viewer);
 
-        TextView textView = (TextView) findViewById(R.id.textView2);
+        // TextView textView = (TextView) findViewById(R.id.textView2);
         Bundle bundle = getIntent().getExtras();
         int index = bundle.getInt("INDEX");
-        textView.setText(Global.descriptions[index]);
-
+        // textView.setText(Global.descriptions[index]);
+        JustifiedTextView txt = (JustifiedTextView) findViewById(R.id.activity_main_jtv);
+        txt.setText(Global.descriptions[index]);
     }
 }

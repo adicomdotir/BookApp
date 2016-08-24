@@ -17,13 +17,21 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" >
 
-        <TextView
+        <!--<TextView-->
+            <!--android:textColor="#000"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="Large Text"-->
+            <!--android:id="@+id/textView2"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true" />-->
+        <ir.adicom.app.shortstorybook.JustifiedTextView
+            android:id="@+id/activity_main_jtv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Large Text"
-            android:id="@+id/textView2"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="25dp" >
+        </ir.adicom.app.shortstorybook.JustifiedTextView>
     </ScrollView>
 </RelativeLayout>
