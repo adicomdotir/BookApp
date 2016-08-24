@@ -3,14 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ir.adicom.app.shortstorybook.MainActivity">
 
-    <TextView
+    <ListView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_height="match_parent"
+        android:id="@+id/listView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/textView"
+        android:background="#FFFFFF" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/footer_message"
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/listView"
+        android:layout_alignStart="@+id/listView" />
 </RelativeLayout>
