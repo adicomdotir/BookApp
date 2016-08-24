@@ -1,6 +1,7 @@
 package ir.adicom.app.shortstorybook;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,17 +17,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.abs_layout);
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, Global.title);
+        MyArrayAdapter arrayAdapter = new MyArrayAdapter(this, Global.title);
         ListView listView = (ListView) findViewById(R.id.listView);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getApplicationContext(), BookViewerActivity.class);
-                intent.putExtra("INDEX", i);
-                startActivity(intent);
-            }
-        });
+        listView.setAdapter(arrayAdapter);
     }
 }
